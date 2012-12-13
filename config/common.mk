@@ -49,7 +49,7 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/05killrfs:system/etc/init.d/05killrfs \
     vendor/nos/killrom/prebuilt/system/etc/init.d/91killrzipalign:system/etc/init.d/91killrzialign \
     vendor/nos/killrom/prebuilt/system/etc/init.d/97killrtcp:system/etc/init.d/97killrtcp \
-    vendor/nos/killrom/prebuilt/system/etc/init.d/99killsystem:system/etc/init.d/99killsystem \
+    vendor/nos/killrom/prebuilt/system/etc/init.d/99killrsystem:system/etc/init.d/99killrsystem \
 
 # sysinit and sysctl support
 PRODUCT_COPY_FILES += \
