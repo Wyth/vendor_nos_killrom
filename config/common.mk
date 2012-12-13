@@ -56,6 +56,15 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/bin/sysinit:system/bin/sysinit \
     vendor/nos/killrom/prebuilt/system/etc/sysctl.conf:system/etc/sysctl.conf
 
+# root
+PRODUCT_PACKAGES += \
+        Superuser \
+        su
+
+#killr extras
+PRODUCT_PACKAGES += \
+        KILLRHome
+
 # extras
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/xbin/zipalign:system/xbin/zipalign \
