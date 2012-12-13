@@ -53,11 +53,11 @@ PRODUCT_COPY_FILES += \
 
 # sysinit and sysctl support
 PRODUCT_COPY_FILES += \
-    vendor/nos/killrom/prebuilt/system/bin/:system/bin/sysinit \
-    vendor/nos/killrom/prebuilt/system/etc/sysctl.conf:system/etc
+    vendor/nos/killrom/prebuilt/system/bin/sysinit:system/bin/sysinit \
+    vendor/nos/killrom/prebuilt/system/etc/sysctl.conf:system/etc/sysctl.conf
 
 # extras
 PRODUCT_COPY_FILES += \
-    vendor/nos/killrom/prebuilt/system/xbin/zipalign:system/bin/zipalign \
-    vendor/nos/killrom/prebuilt/system/xbin/sqlite3:system/bin/sqlite3
+    vendor/nos/killrom/prebuilt/system/xbin/zipalign:system/xbin/zipalign \
+    vendor/nos/killrom/prebuilt/system/xbin/sqlite3:system/xbin/sqlite3
 
