@@ -71,6 +71,9 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/xbin/zipalign:system/xbin/zipalign \
     vendor/nos/killrom/prebuilt/system/xbin/sqlite3:system/xbin/sqlite3
 
+# Bootanimation murdr
+PRODUCT_COPY_FILES += \
+    vendor/nos/killrom/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
