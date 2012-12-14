@@ -70,3 +70,9 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/xbin/zipalign:system/xbin/zipalign \
     vendor/nos/killrom/prebuilt/system/xbin/sqlite3:system/xbin/sqlite3
 
+
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/nos/killrom/prebuilt/system/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/nos/killrom/prebuilt/system/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/nos/killrom/prebuilt/system/bin/50-backup.sh:system/addon.d/50-backup.sh
