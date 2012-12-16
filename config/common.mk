@@ -39,7 +39,7 @@ ro.min.fling_velocity=8000 \
 ro.config.hw_fast_dormancy=1 \
 net.dns1=8.8.4.4 \
 net.dns2=8.8.8.8 \
-ro.killrom.version=AlphaGoFaster
+ro.killrom.version=HeadShot
 
 
 # init.d support
