@@ -74,9 +74,3 @@ PRODUCT_COPY_FILES += \
 # Bootanimation murdr
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
-
-# Backup Tool
-PRODUCT_COPY_FILES += \
-    vendor/nos/killrom/prebuilt/system/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/nos/killrom/prebuilt/system/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/nos/killrom/prebuilt/system/bin/50-backup.sh:system/addon.d/50-backup.sh
