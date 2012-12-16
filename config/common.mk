@@ -46,12 +46,24 @@ ro.killrom.version=HeadShot
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/01killbomb:system/etc/init.d/01killbomb \
+    vendor/nos/killrom/prebuilt/system/etc/init.d/91killrzipalign:system/etc/init.d/91killrzialign \
+    vendor/nos/killrom/prebuilt/system/etc/init.d/97killrtcp:system/etc/init.d/97killrtcp
+
+ifeq ($(TARGET_PRODUCT),full_mako)
+PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/02killrkernel:system/etc/init.d/02killrkernel \
     vendor/nos/killrom/prebuilt/system/etc/init.d/03killrgov:system/etc/init.d/02killrgov \
     vendor/nos/killrom/prebuilt/system/etc/init.d/05killrfs:system/etc/init.d/05killrfs \
-    vendor/nos/killrom/prebuilt/system/etc/init.d/91killrzipalign:system/etc/init.d/91killrzialign \
-    vendor/nos/killrom/prebuilt/system/etc/init.d/97killrtcp:system/etc/init.d/97killrtcp \
-    vendor/nos/killrom/prebuilt/system/etc/init.d/99killrsystem:system/etc/init.d/99killrsystem \
+    vendor/nos/killrom/prebuilt/system/etc/init.d/99killrsystem:system/etc/init.d/99killrsystem
+endif
+
+ifeq ($(TARGET_PRODUCT),full_grouper)
+PRODUCT_COPY_FILES += \
+    vendor/nos/killrom/prebuilt/system/etc/init.d/02killrkernel:system/etc/init.d/02killrkernelgrouper \
+    vendor/nos/killrom/prebuilt/system/etc/init.d/03killrgov:system/etc/init.d/02killrgovgrouper \
+    vendor/nos/killrom/prebuilt/system/etc/init.d/05killrfs:system/etc/init.d/05killrfsgrouper \
+    vendor/nos/killrom/prebuilt/system/etc/init.d/99killrsystem:system/etc/init.d/99killrsystemgrouper
+endif
 
 # sysinit and sysctl support
 PRODUCT_COPY_FILES += \
