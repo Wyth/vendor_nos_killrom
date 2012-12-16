@@ -58,10 +58,10 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/bin/sysinit:system/bin/sysinit \
     vendor/nos/killrom/prebuilt/system/etc/sysctl.conf:system/etc/sysctl.conf
 
-# root
-PRODUCT_PACKAGES += \
-        Superuser \
-        su
+# Copy SuperSu
+PRODUCT_COPY_FILES += \
+    vendor/nos/killrom/prebuilt/system/app/SuperSU.apk:system/app/SuperSU.apk \
+    vendor/nos/killrom/prebuilt/system/xbin/su:system/xbin/su
 
 #killr extras
 PRODUCT_PACKAGES += \
