@@ -42,6 +42,8 @@ net.dns1=8.8.4.4 \
 net.dns2=8.8.8.8 \
 ro.killrom.version=HeadShot
 
+# T-Mobile theme engine
+include vendor/nos/killrom/config/themes_common.mk
 
 # init.d support
 PRODUCT_COPY_FILES += \
