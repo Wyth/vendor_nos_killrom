@@ -2,7 +2,7 @@ PRODUCT_BRAND ?= killrom
 
 # axi0m speed demon
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.build.tags=release-keys
+ro.build.tags=release-keys \
 windowsmgr.max_events_per_sec=350 \
 ro.kernel.android.checkjni=0 \
 ro.media.enc.jpeg.quality=100 \
