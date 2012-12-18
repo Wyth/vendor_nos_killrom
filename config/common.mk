@@ -82,7 +82,7 @@ PRODUCT_PACKAGES += \
 
 #killr extras
 PRODUCT_PACKAGES += \
-        PerformanceControl
+        SpeedDemon
 
 # extras
 PRODUCT_COPY_FILES += \
