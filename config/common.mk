@@ -80,6 +80,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
         KILLRHome
 
+#killr extras
+PRODUCT_PACKAGES += \
+        PerformanceControl
+
 # extras
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/xbin/zipalign:system/xbin/zipalign \
