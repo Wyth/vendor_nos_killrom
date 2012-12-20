@@ -42,7 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.dns2=8.8.8.8 \
     ro.config.ringtone=EazyE.ogg \
     ro.config.notification_sound=Nobody-Move.ogg \
-    ro.killrom.version=DoubleTap
+    ro.killrom.version=FelonyONE
 
 # T-Mobile theme engine
 include vendor/nos/killrom/config/themes_common.mk
