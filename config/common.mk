@@ -44,6 +44,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Nobody-Move.ogg \
     ro.killrom.version=FelonyONE
 
+PRODUCT_PACKAGE_OVERLAYS += vendor/nos/killrom/overlay/common
+
 # T-Mobile theme engine
 include vendor/nos/killrom/config/themes_common.mk
 
