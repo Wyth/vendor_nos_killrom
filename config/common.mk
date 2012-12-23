@@ -54,6 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heaptargetutilization=0.75
     dalvik.vm.heapminfree=512k
     dalvik.vm.heapmaxfree=8m
+endif
 
 # T-Mobile theme engine
 include vendor/nos/killrom/config/themes_common.mk
