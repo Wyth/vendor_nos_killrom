@@ -46,6 +46,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/nos/killrom/overlay/common
 
+ifeq ($(filter full_maguro full_toro,$(TARGET_PRODUCT)),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=256m
+    dalvik.vm.heapgrowthlimit=320m
+    dalvik.vm.heapsize=512m
+    dalvik.vm.heaptargetutilization=0.75
+    dalvik.vm.heapminfree=512k
+    dalvik.vm.heapmaxfree=8m
+
 # T-Mobile theme engine
 include vendor/nos/killrom/config/themes_common.mk
 
