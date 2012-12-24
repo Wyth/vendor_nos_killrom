@@ -45,7 +45,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/nos/killrom/overlay/common
 
-ifeq ($(filter full_maguro full_toro,$(TARGET_PRODUCT)),)
+ifneq ($(filter full_maguro full_toro,$(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=256m \
     dalvik.vm.heapgrowthlimit=320m \
