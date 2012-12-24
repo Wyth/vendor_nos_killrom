@@ -41,19 +41,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.dns1=8.8.4.4 \
     net.dns2=8.8.8.8 \
     ro.config.ringtone=EazyE.ogg \
-    ro.config.notification_sound=Nobody-Move.ogg \
-    ro.killrom.version=FelonyONE
+    ro.config.notification_sound=Nobody-Move.ogg
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/nos/killrom/overlay/common
 
 ifeq ($(filter full_maguro full_toro,$(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=256m
-    dalvik.vm.heapgrowthlimit=320m
-    dalvik.vm.heapsize=512m
-    dalvik.vm.heaptargetutilization=0.75
+    dalvik.vm.heapstartsize=256m \
+    dalvik.vm.heapgrowthlimit=320m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.heapminfree=512k
-    dalvik.vm.heapmaxfree=8m
 endif
 
 # T-Mobile theme engine
