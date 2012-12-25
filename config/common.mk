@@ -1,9 +1,9 @@
 PRODUCT_BRAND ?= killrom
 
-# axi0m speed demon
+# killr speed demon
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.tags=release-keys \
-    windowsmgr.max_events_per_sec=350 \
+    windowsmgr.max_events_per_sec=512 \
     ro.kernel.android.checkjni=0 \
     ro.media.enc.jpeg.quality=100 \
     ro.config.nocheckin=1 \
@@ -15,9 +15,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.hsxpa=3 \
     ro.ril.enable.dtm=1 \
     ro.ril.gprsclass=12 \
-    ro.ril.hsdpa.category=8 \
+    ro.ril.hsdpa.category=28 \
     ro.ril.enable.a53=1 \
-    ro.ril.hsupa.category=5 \
+    ro.ril.enable.3g.prefix=1 \
+    ro.ril.hsupa.category=7 \
     persist.sys.purgeable_assets=1 \
     pm.sleep_mode=1 \
     ro.home_app_adj=1 \
@@ -27,19 +28,31 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=128m \
     dalvik.vm.heapgrowthlimit=320m \
     dalvik.vm.heapsize=512m \
-    dalvik.vm.execution-mode=int:jit \
-    dalvik.vm.heaputilization=0.05 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=16m \
+    dalvik.vm.heaputilization=1.0 \
     dalvik.vm.heapidealfree=8388608 \
     dalvik.vm.heapconcurrentstart=2097152 \
+    dalvik.vm.execution-mode=int:jit \
     dalvik.vm.verify-bytecode=false \
-    ro.dalvik.vm.checkjni=0 \
     dalvik.vm.dexopt-flags=v=n,o=v \
+    ro.dalvik.vm.checkjni=0 \
     debug.composition.type=gpu \
     ro.max.fling_velocity=15000 \
     ro.min.fling_velocity=8000 \
     ro.config.hw_fast_dormancy=1 \
     net.dns1=8.8.4.4 \
     net.dns2=8.8.8.8 \
+    net.ppp0.dns1=8.8.8.8 \
+    net.ppp0.dns2=8.8.4.4 \
+    net.tcp.buffersize.default=6144,87380,1048576,6144,87380,524288 \
+    net.tcp.buffersize.wifi=524288,1048576,2097152,524288,1048576,2097152 \
+    net.tcp.buffersize.umts=6144,87380,1048576,6144,87380,524288 \
+    net.tcp.buffersize.gprs=6144,87380,1048576,6144,87380,524288 \
+    net.tcp.buffersize.edge=6144,87380,524288,6144,16384,262144 \
+    net.tcp.buffersize.hspa=6144,87380,524288,6144,16384,262144 \
+    net.tcp.buffersize.lte=524288,1048576,2097152,524288,1048576,2097152 \
+    net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576 \
     ro.config.ringtone=EazyE.ogg \
     ro.config.notification_sound=Nobody-Move.ogg
 

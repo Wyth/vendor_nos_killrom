@@ -1,6 +1,6 @@
 #!/system/bin/sh
 # DroidTh3ory
-# CMPLX zipalign.
+# KILLR zipalign.
 
 
 LOG_FILE=/data/zipalign.log
