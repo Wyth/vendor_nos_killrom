@@ -30,7 +30,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=16m \
-    dalvik.vm.heaputilization=1.0 \
+    dalvik.vm.heaptargetutilization=1.0 \
     dalvik.vm.heapidealfree=8388608 \
     dalvik.vm.heapconcurrentstart=2097152 \
     dalvik.vm.execution-mode=int:jit \
@@ -56,16 +56,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=EazyE.ogg \
     ro.config.notification_sound=Nobody-Move.ogg
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/nos/killrom/overlay/common
-
-ifneq ($(filter full_maguro full_toro,$(TARGET_PRODUCT)),)
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=256m \
-    dalvik.vm.heapgrowthlimit=320m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=512k
-endif
+PRODUCT_PACKAGE_OVERLAYS += \
+vendor/nos/killrom/overlay/common
 
 # T-Mobile theme engine
 include vendor/nos/killrom/config/themes_common.mk
@@ -89,7 +81,7 @@ endif
 ifeq ($(TARGET_PRODUCT),full_grouper)
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/02killrkernel:system/etc/init.d/02killrkernelgrouper \
-    vendor/nos/killrom/prebuilt/system/etc/init.d/03killrgov:system/etc/init.d/02killrgovgrouper \
+    vendor/nos/killrom/prebuilt/system/etc/init.d/03killrgovgrouper:system/etc/init.d/03killrgovgrouper \
     vendor/nos/killrom/prebuilt/system/etc/init.d/05killrfs:system/etc/init.d/05killrfsgrouper \
     vendor/nos/killrom/prebuilt/system/etc/init.d/99killrsystem:system/etc/init.d/99killrsystemgrouper
 endif
