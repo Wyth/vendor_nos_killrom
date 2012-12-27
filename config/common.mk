@@ -98,10 +98,7 @@ PRODUCT_COPY_FILES += \
 
 #killr extras
 PRODUCT_PACKAGES += \
-        KILLRHome
-
-#killr extras
-PRODUCT_PACKAGES += \
+        KILLRHome \
         SpeedDemon
 
 # extras
@@ -110,5 +107,7 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/xbin/sqlite3:system/xbin/sqlite3
 
 # Bootanimation murdr
+ifneq ($(TARGET_PRODUCT),full_stingray)
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
+endif
