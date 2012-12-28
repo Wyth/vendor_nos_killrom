@@ -52,18 +52,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.tcp.buffersize.edge=6144,87380,524288,6144,16384,262144 \
     net.tcp.buffersize.hspa=6144,87380,524288,6144,16384,262144 \
     net.tcp.buffersize.lte=524288,1048576,2097152,524288,1048576,2097152 \
-    net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576 \
+    net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576
+
+ifeq ($(TARGET_PRODUCT),full_grouper)
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=EazyE.ogg \
     ro.config.notification_sound=Nobody-Move.ogg
+
+# Include KILL audio files
+include vendor/nos/killrom/config/kill_audio.mk
+endif
 
 PRODUCT_PACKAGE_OVERLAYS += \
 vendor/nos/killrom/overlay/common
 
 # T-Mobile theme engine
 include vendor/nos/killrom/config/themes_common.mk
-
-# Include KILL audio files
-include vendor/nos/killrom/config/kill_audio.mk
 
 # init.d support
 PRODUCT_COPY_FILES += \
