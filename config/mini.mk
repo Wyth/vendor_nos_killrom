@@ -44,7 +44,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576
 
 # Base audio files
-include frameworks/base/data/sounds/NewAudio.mk
+include frameworks/base/data/sounds/AudioPackageElements.mk
 
 PRODUCT_PACKAGE_OVERLAYS += \
 vendor/nos/killrom/overlay/common
