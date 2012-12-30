@@ -53,6 +53,7 @@ PRODUCT_COPY_FILES += \
 #killr extras
 PRODUCT_PACKAGES += \
         KILLRHome \
+        LockClock \
         SpeedDemon
 
 # extras
