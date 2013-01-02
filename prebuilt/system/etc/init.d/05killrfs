@@ -2,7 +2,6 @@
 
 # IO
 BLOCK_DEVS=`ls -d /sys/block/mmc*`;
-BLOCK_DEVS="$BLOCK_DEVS `ls -d /sys/block/dm-*`";
 
 for i in $BLOCK_DEVS;
 do
