@@ -52,13 +52,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.tcp.buffersize.edge=6144,87380,524288,6144,16384,262144 \
     net.tcp.buffersize.hspa=6144,87380,524288,6144,16384,262144 \
     net.tcp.buffersize.lte=524288,1048576,2097152,524288,1048576,2097152 \
-    net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576
-
-ifeq ($(TARGET_PRODUCT),full_grouper)
-PRODUCT_PROPERTY_OVERRIDES += \
+    net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576 \
     ro.config.ringtone=EazyE.ogg \
-    ro.config.notification_sound=Nobody-Move.ogg
-endif
+    ro.config.notification_sound=Nobody-Move.ogg \
+    ro.config.alarm_alert=Nobelium.ogg
 
 # Bring in all audio files
 include frameworks/base/data/sounds/NewAudio.mk
