@@ -1,11 +1,4 @@
 #!/system/bin/sh
-# CMPLX TH3ORY Script Set
-
-LOG_FILE=/data/cmplxth3ory.log
-
-if [ -e $LOG_FILE ]; then
-	rm $LOG_FILE;
-fi;
 
 # enable sysctl tweaks
 #
@@ -42,11 +35,6 @@ busybox sysctl -w vm.dirty_writeback_centisecs=2000
 busybox sysctl -w kernel.random.write_wakeup_threshold=256
 busybox sysctl -w kernel.random.read_wakeup_threshold=128
 
-#Screen
-#
-echo "30" > /sys/class/misc/brightness_curve/min_bl
-echo "1" > /sys/class/misc/brightness_curve/min_gamma
-echo "24" > /sys/class/misc/brightness_curve/max_gamma
 
 # Optimize Vm
 #
