@@ -121,5 +121,10 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/xbin/sqlite3:system/xbin/sqlite3
 
 # Bootanimation murdr
+ifneq ($(TARGET_BOOTANIMATION_NAME),)
 PRODUCT_COPY_FILES += \
-    vendor/nos/killrom/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
+    vendor/nos/killrom/prebuilt/system/media/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+else
+PRODUCT_COPY_FILES += \
+    vendor/nos/killrom/prebuilt/system/media/720.zip:system/media/bootanimation.zip
+endif
