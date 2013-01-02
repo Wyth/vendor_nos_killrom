@@ -35,7 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapconcurrentstart=2097152 \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.verify-bytecode=false \
-    dalvik.vm.dexopt-flags=v=n,o=v \
+    dalvik.vm.dexopt-flags=m=y,v=n,o=v \
     ro.dalvik.vm.checkjni=0 \
     debug.composition.type=gpu \
     ro.max.fling_velocity=15000 \
@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/91killrzipalign:system/etc/init.d/91killrzialign \
     vendor/nos/killrom/prebuilt/system/etc/init.d/97killrtcp:system/etc/init.d/97killrtcp
 
-ifeq ($(TARGET_PRODUCT),killr_mako)
+ifeq ($(TARGET_PRODUCT),killr_mako,full_toro)
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/02killrkernel:system/etc/init.d/02killrkernel \
     vendor/nos/killrom/prebuilt/system/etc/init.d/05killrfs:system/etc/init.d/05killrfs \
