@@ -25,14 +25,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ext4fs=1 \
     persist.sys.use_dithering=0 \
     ro.ril.disable.power.collapse=0 \
-    dalvik.vm.heapstartsize=128m \
-    dalvik.vm.heapgrowthlimit=320m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=16m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapidealfree=8388608 \
-    dalvik.vm.heapconcurrentstart=2097152 \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.verify-bytecode=false \
     dalvik.vm.dexopt-flags=m=y,v=n,o=v \
@@ -53,9 +45,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.tcp.buffersize.hspa=6144,87380,524288,6144,16384,262144 \
     net.tcp.buffersize.lte=524288,1048576,2097152,524288,1048576,2097152 \
     net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,87380,1048576 \
-    ro.config.ringtone=EazyE.ogg \
-    ro.config.notification_sound=Nobody-Move.ogg \
-    ro.config.alarm_alert=Nobelium.ogg
 
 # Bring in all audio files
 include frameworks/base/data/sounds/NewAudio.mk
@@ -81,7 +70,7 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/91killrzipalign:system/etc/init.d/91killrzialign \
     vendor/nos/killrom/prebuilt/system/etc/init.d/97killrtcp:system/etc/init.d/97killrtcp
 
-ifeq ($(TARGET_PRODUCT),killr_mako,full_toro)
+ifneq ($(TARGET_PRODUCT),killr_mako full_toro)
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/02killrkernel:system/etc/init.d/02killrkernel \
     vendor/nos/killrom/prebuilt/system/etc/init.d/05killrfs:system/etc/init.d/05killrfs \
@@ -94,6 +83,37 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/03killrgovgrouper:system/etc/init.d/03killrgovgrouper \
     vendor/nos/killrom/prebuilt/system/etc/init.d/05killrfs:system/etc/init.d/05killrfsgrouper \
     vendor/nos/killrom/prebuilt/system/etc/init.d/99killrsystem:system/etc/init.d/99killrsystemgrouper
+endif
+
+ifeq ($(TARGET_PRODUCT),full_grouper)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=EazyE.ogg \
+    ro.config.notification_sound=Nobody-Move.ogg \
+    ro.config.alarm_alert=Nobelium.ogg
+endif
+
+#full speed
+ifeq ($(TARGET_PRODUCT),killr_mako full_grouper)
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=128m \
+    dalvik.vm.heapgrowthlimit=320m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=16m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapidealfree=8388608 \
+    dalvik.vm.heapconcurrentstart=2097152
+endif
+
+# killr tuna
+ifeq ($(TARGET_PRODUCT),full_maguro full_toro)
+PRODUCT_PROPERTY_OVERRIDES += \
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=96m
+dalvik.vm.heapsize=256m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=8m
 endif
 
 # sysinit and sysctl support
