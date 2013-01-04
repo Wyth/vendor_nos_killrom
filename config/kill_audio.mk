@@ -15,9 +15,8 @@ PRODUCT_COPY_FILES += \
 # Ringtones
 PRODUCT_COPY_FILES += \
 	$(RINGTONE_PATH)/EazyE.ogg:system/media/audio/ringtones/EazyE.ogg \
-	$(RINGTONE_PATH)/BeforeIForget.mp3:system/media/audio/notifications/BeforeIForget.mp3 \
-	$(RINGTONE_PATH)/Blind.mp3:system/media/audio/notifications/Blind.mp3 \
-	$(RINGTONE_PATH)/DeadBodiesEverywhere.mp3:system/media/audio/notifications/DeadBodiesEverywhere.mp3 \
-	$(RINGTONE_PATH)/KillTheDj.mp3:system/media/audio/notifications/KillTheDj.mp3 \
-	$(RINGTONE_PATH)/Skip.mp3:system/media/audio/notifications/Skip.mp3
+	$(RINGTONE_PATH)/BeforeIForget.mp3:system/media/audio/ringtones/BeforeIForget.mp3 \
+	$(RINGTONE_PATH)/Blind.mp3:system/media/audio/ringtones/Blind.mp3 \
+	$(RINGTONE_PATH)/DeadBodiesEverywhere.mp3:system/media/audio/ringtones/DeadBodiesEverywhere.mp3 \
+	$(RINGTONE_PATH)/Skip.mp3:system/media/audio/ringtones/Skip.mp3
 

@@ -70,7 +70,7 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/91killrzipalign:system/etc/init.d/91killrzialign \
     vendor/nos/killrom/prebuilt/system/etc/init.d/97killrtcp:system/etc/init.d/97killrtcp
 
-ifneq ($(TARGET_PRODUCT),killr_mako full_toro)
+ifeq ($(TARGET_PRODUCT),killr_mako full_toro)
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/02killrkernel:system/etc/init.d/02killrkernel \
     vendor/nos/killrom/prebuilt/system/etc/init.d/05killrfs:system/etc/init.d/05killrfs \
@@ -92,7 +92,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.alarm_alert=Nobelium.ogg
 endif
 
-ifeq ($(TARGET_PRODUCT),full_grouper)
+ifeq ($(TARGET_PRODUCT),full_grouper full_winray full_stingray)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=EazyE.ogg \
     ro.config.notification_sound=Nobody-Move.ogg \
