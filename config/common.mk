@@ -87,7 +87,7 @@ endif
 ifneq ($(TARGET_PRODUCT),full_grouper)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Blind.mp3 \
-    ro.config.notification_sound=Oxygen.ogg \
+    ro.config.notification_sound=Xenon.ogg \
     ro.config.alarm_alert=Nobelium.ogg
 endif
 
