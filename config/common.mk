@@ -29,7 +29,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.verify-bytecode=false \
     dalvik.vm.dexopt-flags=m=y,v=n,o=v \
     ro.dalvik.vm.checkjni=0 \
-    debug.composition.type=gpu \
     ro.max.fling_velocity=15000 \
     ro.min.fling_velocity=8000 \
     ro.config.hw_fast_dormancy=1 \
@@ -70,7 +69,7 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/91killrzipalign:system/etc/init.d/91killrzialign \
     vendor/nos/killrom/prebuilt/system/etc/init.d/97killrtcp:system/etc/init.d/97killrtcp
 
-ifeq ($(TARGET_PRODUCT),killr_mako full_toro)
+ifneq ($(filter killr_mako full_toro,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/02killrkernel:system/etc/init.d/02killrkernel \
     vendor/nos/killrom/prebuilt/system/etc/init.d/05killrfs:system/etc/init.d/05killrfs \
@@ -85,14 +84,14 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/99killrsystem:system/etc/init.d/99killrsystemgrouper
 endif
 
-ifeq ($(TARGET_PRODUCT),full_toro full_maguro killr_mako)
+ifneq ($(TARGET_PRODUCT),full_grouper)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Blind.mp3 \
     ro.config.notification_sound=Oxygen.ogg \
     ro.config.alarm_alert=Nobelium.ogg
 endif
 
-ifeq ($(TARGET_PRODUCT),full_grouper full_winray full_stingray)
+ifeq ($(TARGET_PRODUCT),full_grouper)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=EazyE.ogg \
     ro.config.notification_sound=Nobody-Move.ogg \
@@ -100,7 +99,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 #full speed
-ifeq ($(TARGET_PRODUCT),killr_mako full_grouper)
+ifneq ($(filter killr_mako full_grouper,$(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=128m \
     dalvik.vm.heapgrowthlimit=320m \
@@ -113,14 +112,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 # killr tuna
-ifeq ($(TARGET_PRODUCT),full_maguro full_toro)
+ifneq ($(filter full_maguro full_toro,$(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
-dalvik.vm.heapstartsize=8m
-dalvik.vm.heapgrowthlimit=96m
-dalvik.vm.heapsize=256m
-dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.heapminfree=512k
-dalvik.vm.heapmaxfree=8m
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapgrowthlimit=96m \
+    dalvik.vm.heapsize=256m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=8m
 endif
 
 # sysinit and sysctl support
