@@ -85,6 +85,13 @@ PRODUCT_COPY_FILES += \
     vendor/nos/killrom/prebuilt/system/etc/init.d/99killrsystem:system/etc/init.d/99killrsystemgrouper
 endif
 
+ifeq ($(TARGET_PRODUCT),full_toro full_maguro killr_mako)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=Blind.mp3 \
+    ro.config.notification_sound=Oxygen.ogg \
+    ro.config.alarm_alert=Nobelium.ogg
+endif
+
 ifeq ($(TARGET_PRODUCT),full_grouper)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=EazyE.ogg \
