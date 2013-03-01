@@ -132,6 +132,8 @@ PRODUCT_COPY_FILES += \
 #    vendor/nos/killrom/prebuilt/system/app/SuperSU.apk:system/app/SuperSU.apk \
 #    vendor/nos/killrom/prebuilt/system/xbin/su:system/xbin/su
 
+SUPERUSER_EMBEDDED := true
+
 #killr extras
 PRODUCT_PACKAGES += \
         KILLRHome \
